@@ -4,6 +4,7 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Service from './pages/Service';
 import Contacts from './pages/Contacts';
+import ServiceDetails from './pages/ServiceDetails';
 
 
 export const App = () => {
@@ -23,6 +24,7 @@ export const App = () => {
     <Route path='/about' element={<About />}/>
     <Route path='/services' element={<Service />}/>
     <Route path='/contacts' element={<Contacts />}/>
+    <Route path='/services/:id' element={<ServiceDetails />}/>
    </Routes>
    </BrowserRouter>
    </>
