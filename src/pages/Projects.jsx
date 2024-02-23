@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Service = () => {
+const Projects = () => {
   return (
     <>
       <div>Services provided</div>
@@ -26,4 +26,4 @@ const Service = () => {
   )
 }
 
-export default Service
+export default Projects
