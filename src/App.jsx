@@ -6,6 +6,9 @@ import Projects from './components/Projects';
 import Contact from './components/Contact';
 import Header from './components/Header';
 import Skills from './components/Skills';
+import Bot from './components/Bot';
+import HireMe from './components/HireMe';
+import Footer from './components/Footer';
 
 
 export const App = () => {
@@ -14,7 +17,7 @@ export const App = () => {
    <BrowserRouter>
    <Header />
    <Routes>
-    <Route path='/' element={<Home />} children={<About />} />
+    <Route path='/' element={<><Home /><About /><Bot/><Skills/><Projects /><HireMe/><Contact /><Footer/></>} />
     <Route path='/about' element={<About />}/>
     <Route path='/skills' element={<Skills />}/>
     <Route path='/projects' element={<Projects />}/>
