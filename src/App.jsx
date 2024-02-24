@@ -1,28 +1,24 @@
 import React from 'react'
-import {BrowserRouter, Routes, Route, Link} from 'react-router-dom';
-import Home from './pages/Home';
-import About from './pages/About';
-import Projects from './pages/Projects';
-import Contacts from './pages/Contacts';
+import {BrowserRouter, Routes, Route} from 'react-router-dom';
+import Home from './components/Home';
+import About from './components/About';
+import Projects from './components/Projects';
+import Contact from './components/Contact';
+import Header from './components/Header';
+import Skills from './components/Skills';
 
 
 export const App = () => {
   return (
    <>
    <BrowserRouter>
-   <header>
-    <nav>
-      <Link to='/'>Home</Link>
-      <Link to='/about'>About</Link>
-      <Link to='/projects'>Projects</Link>
-      <Link to='/contacts'>Contacts</Link>
-    </nav>
-   </header>
+   <Header />
    <Routes>
-    <Route path='/' element={<Home />}/>
+    <Route path='/' element={<Home />} children={<About />} />
     <Route path='/about' element={<About />}/>
+    <Route path='/skills' element={<Skills />}/>
     <Route path='/projects' element={<Projects />}/>
-    <Route path='/contacts' element={<Contacts />}/>
+    <Route path='/contacts' element={<Contact />}/>
    </Routes>
    </BrowserRouter>
    </>
