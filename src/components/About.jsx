@@ -18,7 +18,7 @@ const About = () => {
                     <div className='p-2'>
                         <div className='text-gray-300 my-3'>
                             <p className='text-justify leading-7 w-11/12 mx-auto'>
-                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Hic dolore alias esse officia facilis delectus architecto aut et recusandae natus! Provident voluptas reprehenderit temporibus veniam soluta assumenda molestiae modi laudantium!
+                            Passionate developer proficient in full-stack web development with a passion for crafting efficient and user-friendly solutions. Skilled in HTML, CSS, JavaScript, and various frameworks including React and Node.js. Dedicated to continuously learning and implementing innovative technologies to create impactful digital experiences.
                             </p>
                             <div className='flex mt-10 items-center gap-7 justify-center'>
                                 {

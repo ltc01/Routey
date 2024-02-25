@@ -39,14 +39,14 @@ const Skills = () => {
                             key={i}
                             className='border-2 group relative min-w-[10rem] max-w-[16rem] bg-gray-900 border-blue-600 p-10 rounded-xl'>
                                 <div style={{
-                                    background: `conic-gradient(rgb(8,105,170) ${skill.count}%, #ddd ${skill.count}%)`,
+                                    background: `conic-gradient(rgb(8,100,180) ${skill.count}%, #ddd ${skill.count}%)`,
                                 }}
                                     className='w-32 h-32 flex items-center justify-center rounded-full'>
-                                    <div className="text-6xl w-28 h-28 bg-gray-900 rounded-full flex group group-hover:text-blue-600 items-center justify-center">
+                                    <div className="text-6xl w-28 h-28 bg-gray-900 rounded-full flex group group-hover:text-blue-400 items-center justify-center">
                                         <ion-icon name={skill.logo}></ion-icon>
                                     </div>
                                 </div>
-                                <p className='text-xl mt-3'>{skill.level}</p>
+                                <p className='text-xl font-semibold mt-3'>{skill.level}</p>
 
                             </div>
                         ))

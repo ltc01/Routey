@@ -15,17 +15,17 @@ const Header = () => {
     },[])
   return (
       <header>
-         <nav className={`fixed w-full left-0 top-0 z-[999] ${sticky ? "bg-white/70 text-gray-900": "text-white"}`}>
+         <nav className={`fixed w-full left-0 top-0 z-[999] ${sticky ? "border-b border-gray-400 bg-white backdrop-filter backdrop-blur-lg bg-opacity-20": "text-white"}`}>
             <div className='flex items-center justify-between'>
-                <div className="mx-10">
+                <div className="ml-24">
                     <h4 className="font-bold text-4xl">
-                        Lax<span className="text-blue-600">miii.</span>
+                        Lax<span className="text-blue-400">miii.</span>
                     </h4>
                 </div>
-                <div className={`${sticky? "md: bg-white/0 bg-white": "bg-white" } text-gray-900 lg:block hidden px-7 py-2 font-medium rounded-bl-full`}>
-                    <ul className="flex items-center gap-1 py-2 text-lg">
+                <div className={`${sticky && "text-white" } lg:block hidden pr-20 py-2 font-medium`}>
+                    <ul className="flex items-center gap-1 py-3 text-lg">
                         {menuLinks?.map((menu,i)=> (
-                            <li key={i} className="hover:text-blue-600 px-10">
+                            <li key={i} className="hover:text-blue-600 px-7">
                                 <a href={menu} >{menu}</a>
                             </li>
                         ))}
@@ -33,16 +33,16 @@ const Header = () => {
                 </div>
                 <div 
                 onClick={()=> setOpen(!open)}
-                className={`z-[999] ${open && "text-gray-900"} text-4xl lg:hidden m-5`}>
+                className={`z-[999] text-4xl ${open && 'text-gray-900'} lg:hidden m-5`}>
                     {open ? <ion-icon name="close"></ion-icon> : <ion-icon name="menu"></ion-icon>}
                 </div>
-                <div className={`lg:hidden text-gray-900 absolute w-1/2 h-screen px-7 py-2 font-medium duration-300 bg-white top-0 ${ open ? "right-0" : "right-[-100%]"}`}>
-                    <ul className='flex flex-col gap-10 justify-center h-full text-lg py-2'>
+                <div className={`lg:hidden rounded-l-xl ${open ? 'duration-300 text-gray-900 right-0': '-right-[100%]'} absolute backdrop-blur-xl border-l border-gray-300 w-1/3 px-7 bg-white py-20 font-medium top-3`}>
+                    <ul className='flex flex-col gap-9 justify-center text-lg py-2'>
                         {menuLinks?.map((menu, i)=>(
                             <li 
                             onClick={()=> setOpen(false)}
                             key={i} 
-                            className='px-6 hover:text-blue-700'>
+                            className='px-6 hover:text-blue-500'>
                                 <a href={menu}>{menu}</a>
                             </li>
                         ))}

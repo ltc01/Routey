@@ -10,7 +10,7 @@ body {
  @apply box-border bg-gray-900 text-gray-100; 
 }
 .btn-primary{
-  @apply bg-blue-500 font-semibold text-white md:mx-0 mx-auto rounded-full py-3 px-6 flex items-center gap-2;
+  @apply bg-blue-700 font-semibold text-white md:mx-0 mx-auto rounded-full py-3 px-6 flex items-center gap-2;
 }
 .pic::after{
   @apply content-[''] w-full left-0 top-0 rounded-xl rotate-12 h-full -z-10 absolute bg-gray-700;
