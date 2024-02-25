@@ -30,9 +30,11 @@ const Home = () => {
           Passionate Full Stack Web Developer.
         </h4>
 
-        <button className="btn-primary font-semibold hover:animate-pulse hover:bg-blue-500 mt-8">
-          Download CV
+
+        <button className="btn-primary font-semibold mt-8">
+          <a href='https://drive.google.com/file/d/1oSU5eUI-ciuWQOZU2OH_9TofGC5qeGpt/view?usp=sharing' target="_blank">Download CV</a>
         </button>
+
         <div className="mt-8 text-3xl flex items-center md:justify-start justify-center gap-5">
           {social_media.map((icon) => (
             <div
@@ -46,7 +48,7 @@ const Home = () => {
               >
                 <ion-icon name={icon.icon}></ion-icon>
               </a>
-              
+
             </div>
           ))}
         </div>

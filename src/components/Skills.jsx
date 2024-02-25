@@ -4,45 +4,55 @@ const Skills = () => {
     const skills = [
         {
             logo: 'logo-html5',
-            level: 'Advance',
+            level: 'HTML5',
+            text: 'text-red-400',
             count: 86,
         },
         {
             logo: 'logo-css3',
-            level: 'Expert',
+            level: 'CSS3',
+            text: 'text-blue-400',
             count: 90,
         },
         {
             logo: 'logo-nodejs',
-            level: 'Beginner',
+            level: 'Node.js',
+            text: 'text-green-700',
             count: 40,
         },
         {
             logo: 'logo-react',
-            level: 'Intermediate',
+            level: 'React',
+            text: 'text-blue-500',
+            count: 50,
+        },
+        {
+            logo: 'logo-javascript',
+            level: 'Javascript',
+            text: 'text-yellow-500',
             count: 50,
         },
     ]
   return (
     <section
             id='skills'
-            className='py-10 bg-gray-800 relative'
+            className='pb-10 relative'
         >
-            <div className='mt-8 text-gray-100 text-center'>
-                <h3 className='text-4xl font-semibold'>
-                    My <span className="text-blue-600">Skills</span></h3>
-                <p className="text-gray-400 mt-3 text-lg">My knowledge</p>
+            <div className='mt-8 px-10 text-gray-100 text-center'>
+                <h3 className='text-4xl font-bold'>
+                    Tech <span className="text-blue-600">Skills</span></h3>
+                {/* <p className="text-gray-400 mt-3 text-lg">My knowledge</p> */}
                 <div className="flex item-center justify-center mt-12 gap-10 flex-wrap">
                     {
                         skills?.map((skill, i) => (
                             <div 
                             key={i}
-                            className='border-2 group relative min-w-[10rem] max-w-[16rem] bg-gray-900 border-blue-600 p-10 rounded-xl'>
+                            className='border-2 hover:border-blue-700 hover:bg-gray-800 group relative min-w-[10rem] max-w-[16rem] border-blue-900 p-10 rounded-xl'>
                                 <div style={{
-                                    background: `conic-gradient(rgb(8,100,180) ${skill.count}%, #ddd ${skill.count}%)`,
+                                    background: `conic-gradient(rgb(50, 100, 200) ${skill.count}%, #ddd ${skill.count}%)`,
                                 }}
-                                    className='w-32 h-32 flex items-center justify-center rounded-full'>
-                                    <div className="text-6xl w-28 h-28 bg-gray-900 rounded-full flex group group-hover:text-blue-400 items-center justify-center">
+                                    className='w-20 h-20 flex items-center justify-center rounded-full'>
+                                    <div className={`text-4xl ${skill.text} w-[4.3rem] h-[4.3rem] bg-gray-900 rounded-full flex items-center justify-center`}>
                                         <ion-icon name={skill.logo}></ion-icon>
                                     </div>
                                 </div>

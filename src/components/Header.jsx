@@ -15,10 +15,10 @@ const Header = () => {
     },[])
   return (
       <header>
-         <nav className={`fixed w-full left-0 top-0 z-[999] ${sticky ? "border-b border-gray-400 bg-white backdrop-filter backdrop-blur-lg bg-opacity-20": "text-white"}`}>
+         <nav className={`fixed w-full left-0 top-0 z-[999] ${sticky && "border-b border-gray-400 bg-white backdrop-filter backdrop-blur-lg bg-opacity-20"}`}>
             <div className='flex items-center justify-between'>
                 <div className="ml-24">
-                    <h4 className="font-bold text-4xl">
+                    <h4 className="font-bold text-4xl text-white">
                         Lax<span className="text-blue-400">miii.</span>
                     </h4>
                 </div>
@@ -26,7 +26,7 @@ const Header = () => {
                     <ul className="flex items-center gap-1 py-3 text-lg">
                         {menuLinks?.map((menu,i)=> (
                             <li key={i} className="hover:text-blue-600 px-7">
-                                <a href={menu} >{menu}</a>
+                                {menu}
                             </li>
                         ))}
                     </ul>
@@ -43,7 +43,7 @@ const Header = () => {
                             onClick={()=> setOpen(false)}
                             key={i} 
                             className='px-6 hover:text-blue-500'>
-                                <a href={menu}>{menu}</a>
+                                {menu}
                             </li>
                         ))}
                     </ul>
