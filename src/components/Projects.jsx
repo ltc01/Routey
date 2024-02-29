@@ -1,6 +1,10 @@
 import React from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react';
-import pic from '../assets/react.svg';
+import forex from '../assets/Forex.png';
+import pin from '../assets/Pinterest.png';
+import ip from '../assets/IPTracker.png';
+import url from '../assets/url.png';
+import pic from '../assets/pic.png';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import { Pagination, Autoplay } from 'swiper/modules';
@@ -8,34 +12,34 @@ import { Pagination, Autoplay } from 'swiper/modules';
 const Projects = () => {
     const projects = [
         {
-            img: pic,
+            img: pin,
             name: "Pinterest clone",
-            github_link: "#",
-            live_link: "#"
+            github_link: "https://github.com/ltc01/Pinterest_frontend.git",
+            live_link: "https://pinterest-frontend-nine.vercel.app/"
         },
         {
-            img: pic,
+            img: forex,
             name: "ForeXplore",
-            github_link: "#",
-            live_link: "#"
+            github_link: "https://github.com/ltc01/ForeXplore.git",
+            live_link: "https://fore-xplore.vercel.app/"
         },
         {
             img: pic,
             name: "Picture Gallery App",
-            github_link: "#",
+            github_link: "https://github.com/ltc01/Picture-Gallery.git",
             live_link: "#"
         },
         {
-            img: pic,
+            img: ip,
             name: "IP Tracker",
-            github_link: "#",
-            live_link: "#"
+            github_link: "https://github.com/ltc01/IpTracker.git",
+            live_link: "https://ip-tracker-ltc01.vercel.app/"
         },
         {
-            img: pic,
+            img: url,
             name: "Shortly",
-            github_link: "#",
-            live_link: "#"
+            github_link: "https://github.com/ltc01/UrlShortener.git",
+            live_link: "https://url-shortener-ltc01.vercel.app/"
         },
     ]
   return (
@@ -49,31 +53,31 @@ const Projects = () => {
             </div>
             <br />
             <div className="flex max-w-6xl justify-evenly px-5 mx-auto items-center relative">
-                <div className="lg:w-1/2 w-full">
+                <div className="w-[50%] mx-auto">
                     <Swiper
                         slidesperview={1.2}
                         spaceBetween={20}
                         breakpoints={{ 768: { slidesperview: 2, }, }}
                         loop={true}
-                        autoplay={{ delay: 3000, }}
+                        autoplay={{ delay: 6000, }}
                         pagination={{ clickable: true, }}
                         modules={[Pagination, Autoplay]}
                     >
                         {
                             projects.map((project_info, i) => (
                                 <SwiperSlide key={i}>
-                                    <div className="h-fit md:w-full py-10 px-8 text-white bg-black rounded-xl overflow-hidden">
-                                        <img src={project_info.img} alt="" className="w-full h-60 object-contain" />
-                                        <h3 className="text-xl text-center md:text-2xl my-8 font-semibold">{project_info.name}</h3>
+                                    <div className="h-fit md:w-full p-8 text-white bg-gray-800 rounded-xl overflow-hidden">
+                                        <img src={project_info.img} alt="" className="w-full object-cover object-top" />
+                                        <h3 className="text-xl md:text-2xl my-2 font-semibold">{project_info.name}</h3>
                                         <div className="flex justify-center gap-6 my-5">
                                             <a 
                                             href={project_info.github_link} 
                                             target="_blank" rel='noreferrer'
-                                            className='border-2 hover:bg-blue-900 rounded-xl border-blue-600 px-5 py-2 inline-block'>Github</a>
+                                            className='border hover:bg-blue-900 border-blue-600 rounded-full px-5 py-1 inline-block'>Github</a>
                                             <a 
                                             href={project_info.live_link} 
                                             target='_blank' rel='noreferrer'
-                                            className='border-2 hover:bg-blue-900 border-blue-600 rounded-xl px-5 py-2 inline-block'>Live Demo</a>
+                                            className='border hover:bg-blue-900 border-blue-600 rounded-full px-5 py-1 inline-block'>Live Demo</a>
                                         </div>
                                     </div>
                                 </SwiperSlide>
@@ -82,7 +86,7 @@ const Projects = () => {
                     </Swiper>
                 </div >
                 <div className="lg:block hidden ">
-                    <img src={pic} alt="" />
+                    <img src={"#"} alt="" />
                 </div>
 
             </div>
