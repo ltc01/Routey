@@ -20,14 +20,14 @@ const Contact = () => {
                         <input type="text" name="" id="" placeholder='Your Name' />
                         <input type="email" name="" id="" placeholder='Your Email Address...' />
                         <textarea placeholder="Your Message" rows={10}></textarea>
-                        <button className='btn-primary w-fit'>Send Message</button>
+                        <button className='btn-primary w-fit'>Send </button>
 
                     </form>
                     <div className='flex flex-col gap-7'>
                      {
                         contact_info.map((contact,i)=>(
                             <div key={i} className='flex gap-4 w-fit items-center'>
-                              <div className='min-w-[3.5rem] min-h-[3.5rem] flex items-center justify-center text-white bg-blue-600  rounded-full text-3xl'>
+                              <div className='min-w-[3rem] min-h-[3rem] flex items-center justify-center text-white bg-blue-600  rounded-full text-3xl'>
                                 <ion-icon name={contact.logo}></ion-icon>
                             </div>
                             <p className="text-base">{contact.text}</p>
