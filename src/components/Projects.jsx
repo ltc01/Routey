@@ -53,7 +53,7 @@ const Projects = () => {
             </div>
             <br />
             <div className="flex max-w-6xl justify-evenly px-5 mx-auto items-center relative">
-                <div className="w-[50%] mx-auto">
+                <div className="md:w-[70%] w-[90%] mx-auto">
                     <Swiper
                         slidesperview={1.2}
                         spaceBetween={20}
@@ -73,11 +73,11 @@ const Projects = () => {
                                             <a 
                                             href={project_info.github_link} 
                                             target="_blank" rel='noreferrer'
-                                            className='border hover:bg-blue-900 border-blue-600 rounded-full px-5 py-1 inline-block'>Github</a>
+                                            className='border hover:bg-blue-900 border-blue-600 rounded-full px-5 md:py-1 inline-block'>Github</a>
                                             <a 
                                             href={project_info.live_link} 
                                             target='_blank' rel='noreferrer'
-                                            className='border hover:bg-blue-900 border-blue-600 rounded-full px-5 py-1 inline-block'>Live Demo</a>
+                                            className='border hover:bg-blue-900 border-blue-600 rounded-full px-5 md:py-1 inline-block'>Live Demo</a>
                                         </div>
                                     </div>
                                 </SwiperSlide>

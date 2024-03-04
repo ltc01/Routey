@@ -17,7 +17,7 @@ export const App = () => {
    <BrowserRouter>
    <Header />
    <Routes>
-    <Route path='/' element={<><Home /><About /><Bot/><Projects /><HireMe/><Contact /><Footer/></>} />
+    <Route path='/' element={<><Home /><About /><Bot/><Projects /><Contact /><Footer/></>} />
     <Route path='/about' element={<About />}/>
     <Route path='/skills' element={<Skills />}/>
     <Route path='/projects' element={<Projects />}/>

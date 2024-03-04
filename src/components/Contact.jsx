@@ -10,24 +10,23 @@ const Contact = () => {
     <section id='contact' className='py-10 px-3 text-white'>
             <div className="text-center mt-8">
                 <h3 className="text-4xl font-semibold">
-                    Contact <span className='text-blue-600'>Me</span>
+                    Let's <span className='text-blue-600'>Connect</span>
                 </h3>
-                <p className="text-gray-400 my-3 text-lg">Get in touch</p>
+                <p className="text-gray-400 my-1 text-lg">Get in touch</p>
 
-                <div className='mt-16 flex md:flex-row flex-col gap-6 max-w-5xl bg-gray-800 md:p-6 p-2 rounded-lg mx-auto'>
+                <div className='mt-10 flex md:flex-row flex-col gap-6 max-w-5xl bg-gray-800 p-6 rounded-lg mx-auto'>
 
                     <form action="" className='flex flex-col flex-1 gap-5'>
-                        <input type="text" name="" id="" placeholder='Your Name' />
-                        <input type="email" name="" id="" placeholder='Your Email Address...' />
-                        <textarea placeholder="Your Message" rows={10}></textarea>
-                        <button className='btn-primary w-fit'>Send </button>
-
+                        <input type="text" name="" id="" placeholder='Enter Full Name...' />
+                        <input type="email" name="" id="" placeholder='Enter Email Address...' />
+                        <textarea placeholder="Enter Your Message..." rows={10}></textarea>
+                        <button className='btn-primary w-fit'>Submit</button>
                     </form>
-                    <div className='flex flex-col gap-7'>
+                    {/* <div className='flex flex-col gap-1'>
                      {
                         contact_info.map((contact,i)=>(
-                            <div key={i} className='flex gap-4 w-fit items-center'>
-                              <div className='min-w-[3rem] min-h-[3rem] flex items-center justify-center text-white bg-blue-600  rounded-full text-3xl'>
+                            <div key={i} className='flex gap-3 w-fit items-center'>
+                              <div className='p-2 flex items-center justify-center text-white rounded-full text-lg'>
                                 <ion-icon name={contact.logo}></ion-icon>
                             </div>
                             <p className="text-base">{contact.text}</p>
@@ -35,7 +34,7 @@ const Contact = () => {
                         ))
                      }
                        
-                    </div>
+                    </div> */}
                 </div>
             </div>
         </section>
