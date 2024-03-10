@@ -30,7 +30,19 @@ const Skills = () => {
             logo: 'logo-javascript',
             level: 'Javascript',
             text: 'text-yellow-500',
-            count: 50,
+            count: 68,
+        },
+        {
+            logo: 'logo-python',
+            level: 'python',
+            text: 'text-green-500',
+            count: 60,
+        },
+        {
+            logo: 'logo-github',
+            level: 'Github',
+            text: 'text-white',
+            count: 40,
         },
     ]
   return (
@@ -42,7 +54,7 @@ const Skills = () => {
                 <h3 className='text-4xl font-bold'>
                     Tech <span className="text-blue-600">Skills</span></h3>
                 {/* <p className="text-gray-400 mt-3 text-lg">My knowledge</p> */}
-                <div className="flex item-center justify-center mt-12 gap-10 flex-wrap">
+                <div className="flex item-center px-2 lg:px-40 justify-center mt-12 gap-10 flex-wrap">
                     {
                         skills?.map((skill, i) => (
                             <div 

@@ -14,13 +14,13 @@ const Contact = () => {
                 </h3>
                 <p className="text-gray-400 my-1 text-lg">Get in touch</p>
 
-                <div className='mt-10 flex md:flex-row flex-col gap-6 max-w-5xl bg-gray-800 p-6 rounded-lg mx-auto'>
+                <div className='mt-10 flex md:flex-row flex-col gap-6 max-w-lg bg-gray-800 p-6 rounded-lg mx-auto'>
 
-                    <form action="" className='flex flex-col flex-1 gap-5'>
-                        <input type="text" name="" id="" placeholder='Enter Full Name...' />
-                        <input type="email" name="" id="" placeholder='Enter Email Address...' />
-                        <textarea placeholder="Enter Your Message..." rows={10}></textarea>
-                        <button className='btn-primary w-fit'>Submit</button>
+                    <form action="/submit-form" method="post" className='flex flex-col flex-1 items-center gap-5'>
+                        <input type="text" className='bg-gray-700 w-full text-md text-white' name="username" id="username" placeholder='Enter Full Name...'  />
+                        <input type="email" className='bg-gray-700 w-full text-md text-white' name="email" id="email" placeholder='Enter Email Address...' />
+                        <textarea placeholder="Enter Your Message..." className='bg-gray-700 w-full text-md text-white' rows={5} name='message'></textarea>
+                        <button className='btn-primary w-fit'type='submit'>Submit</button>
                     </form>
                     {/* <div className='flex flex-col gap-1'>
                      {
