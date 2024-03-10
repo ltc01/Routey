@@ -7,7 +7,7 @@ import Contact from './components/Contact';
 import Header from './components/Header';
 import Skills from './components/Skills';
 import Bot from './components/Bot';
-import HireMe from './components/HireMe';
+// import HireMe from './components/HireMe';
 import Footer from './components/Footer';
 
 
