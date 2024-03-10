@@ -17,12 +17,13 @@ export const App = () => {
    <BrowserRouter>
    <Header />
    <Routes>
-    <Route path='/' element={<><Home /><About /><Bot/><Projects /><Contact /><Footer/></>} />
+    <Route path='/' element={<><Home /><About /><Bot/><Projects /><Contact /></>} />
     <Route path='/about' element={<About />}/>
     <Route path='/skills' element={<Skills />}/>
     <Route path='/projects' element={<Projects />}/>
     <Route path='/contacts' element={<Contact />}/>
    </Routes>
+   <Footer />
    </BrowserRouter>
    </>
   )

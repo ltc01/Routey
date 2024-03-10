@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 
 const Header = () => {
   const [sticky, setSticky] = useState(false);
     const [open, setOpen] = useState(false);
-    const menuLinks = ["Home", "About", "Skills","Projects","Contact"];
+    const location = useLocation();
+    const menuLinks = ["Home", "About", "Skills","Projects","Contacts"];
 
     useEffect(()=>{
         window.addEventListener("scroll",()=>{
@@ -17,16 +18,18 @@ const Header = () => {
       <header>
          <nav className={`fixed w-full left-0 top-0 z-[999] ${sticky && "border-b border-gray-400 bg-white backdrop-filter backdrop-blur-lg bg-opacity-20"}`}>
             <div className='flex items-center justify-between'>
+                {/* Brand Logo */}
                 <div className="ml-24">
                     <h4 className="font-bold text-4xl text-white">
-                        Lax<span className="text-blue-400">miii.</span>
+                        Lax<span className="text-blue-500">miii.</span>
                     </h4>
                 </div>
+                {/* Nav items */}
                 <div className={`${sticky && "text-white" } lg:block hidden pr-20 py-2 font-medium`}>
                     <ul className="flex items-center gap-1 py-3 text-lg">
                         {menuLinks?.map((menu,i)=> (
-                            <li key={i} className="hover:text-blue-600 px-7">
-                                {menu}
+                            <li key={i} className={`hover:text-blue-500 font-semibold cursor-pointer px-7 ${location.pathname === (menu === 'Home' ? '/' : `/${menu.toLowerCase()}`) && 'underline'}`}>
+                                <Link to={menu === 'Home'? `/` : `/${menu.toLowerCase()}`}>{menu}</Link>
                             </li>
                         ))}
                     </ul>

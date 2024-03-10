@@ -7,7 +7,7 @@ const Contact = () => {
         {logo:'location',text:"Kamatghar,Bhiwandi,Thane, Maharashtra-421 305"},
     ]
   return (
-    <section id='contact' className='py-10 px-3 text-white'>
+    <section id='contact' className='md:py-32 py-20 text-white border-y border-gray-700'>
             <div className="text-center mt-8">
                 <h3 className="text-4xl font-semibold">
                     Let's <span className='text-blue-600'>Connect</span>

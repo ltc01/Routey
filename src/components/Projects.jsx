@@ -44,7 +44,7 @@ const Projects = () => {
     ]
   return (
     <section id='projects'
-            className='py-20 text-white'>
+            className='md:py-32 py-20 text-white border-y border-gray-700'>
             <div className="text-center">
                 <h3 className="text-4xl font-semibold">
                     My <span className='text-blue-600'>Projects</span>
@@ -73,11 +73,17 @@ const Projects = () => {
                                             <a 
                                             href={project_info.github_link} 
                                             target="_blank" rel='noreferrer'
-                                            className='border hover:bg-blue-900 border-blue-600 rounded-full px-5 md:py-1 inline-block'>Github</a>
+                                            className='border hover:bg-blue-900 border-blue-600 rounded-full px-5 md:py-2'>
+                                                Github 
+                                                <ion-icon name="open-outline"></ion-icon>
+                                            </a>
                                             <a 
                                             href={project_info.live_link} 
                                             target='_blank' rel='noreferrer'
-                                            className='border hover:bg-blue-900 border-blue-600 rounded-full px-5 md:py-1 inline-block'>Live Demo</a>
+                                            className='border hover:bg-blue-900 border-blue-600 rounded-full px-5 md:py-2'>
+                                                Live Demo
+                                                <ion-icon name="open-outline"></ion-icon>
+                                                </a>
                                         </div>
                                     </div>
                                 </SwiperSlide>
