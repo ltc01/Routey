@@ -20,8 +20,8 @@ This personal portfolio project serves as a demonstration of my abilities, exper
 
 ## Installation
 To run this project locally, follow these steps:
-1. Clone the repository: `git clone https://github.com/yourusername/your-portfolio.git`
-2. Navigate to the project directory: `cd your-portfolio`
+1. Clone the repository: `git clone https://github.com/ltc01/laxmi-portfolio.git`
+2. Navigate to the project directory: `cd laxmi-portfolio`
 3. Open `index.html` in your web browser.
 
 ## Usage
@@ -30,12 +30,7 @@ To run this project locally, follow these steps:
 - Feel free to explore and interact with the content to learn more about me and my work.
 
 ## Credits
-This project was created by Laxmi Chaudhary. Special thanks to the following resources:
-- [Bootstrap](https://getbootstrap.com/) for the responsive design framework.
-- [Font Awesome](https://fontawesome.com/) for the icons used throughout the portfolio.
-- [Unsplash](https://unsplash.com/) for providing high-quality images.
+This project was created by Laxmi Chaudhary.
 
-
----
 
 Thank you for visiting!
