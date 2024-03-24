@@ -1,4 +1,4 @@
-# Personal Portfolio Project
+# Portfolio Project
 
 Welcome to my personal portfolio project! This project showcases my skills, experience, and projects I have worked on. Below you'll find information on how to navigate through the repository and view the contents of my portfolio.
 
