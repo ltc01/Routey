@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import Swal from 'sweetalert2';
 
 const Contact = () => {
     const contact_info=[
@@ -6,6 +7,48 @@ const Contact = () => {
         {logo:'logo-WhatsApp',text:"809 706 2444"},
         {logo:'location',text:"Kamatghar,Bhiwandi,Thane, Maharashtra-421 305"},
     ]
+    const onSubmit = async (event) => {
+        event.preventDefault();
+        const formData = new FormData(event.target);
+
+        formData.append("access_key", "9be036d9-4a3f-4aa7-b967-c55e07df770a");
+
+        const response = await fetch("https://api.web3forms.com/submit", {
+            method: "POST",
+            body: formData
+        });
+        const data = await response.json();
+
+        if (data.success) {
+            event.target.reset();
+            let timerInterval;
+            Swal.fire({
+                title: "Thank You!",
+                html: "I'll get back to you soon.",
+                timer: 5000,
+                timerProgressBar: true,
+                icon: "success",
+                willClose: () => {
+                    clearInterval(timerInterval);
+                }
+            })
+
+        } else {
+            console.log("Error", data);
+            let timerInterval;
+            Swal.fire({
+                title: "Error!",
+                html: "Failed, Please try again.",
+                timer: 5000,
+                timerProgressBar: true,
+                icon: "error",
+                willClose: () => {
+                    clearInterval(timerInterval);
+                }
+            })
+            
+        }
+    };
   return (
     <section id='contact' className='md:py-32 py-20 text-white border-y border-gray-700'>
             <div className="text-center mt-8">
@@ -16,10 +59,10 @@ const Contact = () => {
 
                 <div className='mt-10 flex md:flex-row flex-col gap-6 max-w-lg bg-gray-800 p-6 rounded-lg mx-auto'>
 
-                    <form action="/submit-form" method="post" className='flex flex-col flex-1 items-center gap-5'>
-                        <input type="text" className='bg-gray-700 w-full text-md text-white' name="username" id="username" placeholder='Enter Full Name...'  />
-                        <input type="email" className='bg-gray-700 w-full text-md text-white' name="email" id="email" placeholder='Enter Email Address...' />
-                        <textarea placeholder="Enter Your Message..." className='bg-gray-700 w-full text-md text-white' rows={5} name='message'></textarea>
+                    <form onSubmit={onSubmit} className='flex flex-col flex-1 items-center gap-5'>
+                        <input required type="text" className='bg-gray-700 w-full text-md text-white' name="name" id="name" placeholder='Enter Full Name...'  />
+                        <input required type="email" className='bg-gray-700 w-full text-md text-white' name="email" id="email" placeholder='Enter Email Address...' />
+                        <textarea required placeholder="Enter Your Message..." className='bg-gray-700 w-full text-md text-white' rows={5} name='message'></textarea>
                         <button className='btn-primary w-fit'type='submit'>Submit</button>
                     </form>
                     {/* <div className='flex flex-col gap-1'>
