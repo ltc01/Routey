@@ -27,5 +27,5 @@ input, textarea{
   @apply text-lg;
 }
 ::selection{
-  @apply bg-blue-950
+  @apply bg-blue-800 text-white
 }
