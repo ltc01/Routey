@@ -32,7 +32,7 @@ const Home = () => {
 
 
         <button className="btn-primary font-semibold mt-8">
-          <a href='https://drive.google.com/file/d/1oSU5eUI-ciuWQOZU2OH_9TofGC5qeGpt/view?usp=sharing' target="_blank">
+          <a href='https://drive.google.com/file/d/1ggHuwUR3jY7M891BjsorGR-5DlUxPK5h/view?usp=sharing' target="_blank">
             Download CV
           </a>
           <ion-icon name="cloud-download-outline"></ion-icon>
