@@ -13,8 +13,8 @@ const Projects = () => {
     const projects = [
         {
             img: pin,
-            name: "Pinterest clone",
-            github_link: "https://github.com/ltc01/Pinterest_frontend.git",
+            name: "Smart Serve",
+            github_link: "https://github.com/ltc01/SmartServe_frontend.git",
             live_link: "https://pinterest-frontend-nine.vercel.app/"
         },
         {
