@@ -6,8 +6,6 @@ Welcome to my personal portfolio project! This project showcases my skills, expe
 1. [Introduction](#introduction)
 2. [Features](#features)
 3. [Installation](#installation)
-4. [Usage](#usage)
-5. [Credits](#credits)
 
 ## Introduction
 This personal portfolio project serves as a demonstration of my abilities, experiences, and projects. It includes sections such as an about me, my skills, projects I've worked on, contact information, and more.
